@@ -39,6 +39,12 @@ class ProductController extends Controller
             ->getClientOriginalName(), 'public'
         );
 
+        $product->save();
+
+        return response([
+            'message' => 'Product added'
+        ]);
+
     }
 
     public function showProduct($id) {
