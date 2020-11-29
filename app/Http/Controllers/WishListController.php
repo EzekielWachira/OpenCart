@@ -44,6 +44,6 @@ class WishListController extends Controller
     }
 
     public function clearWishList(){
-        
+
     }
 }
