@@ -17,8 +17,7 @@
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishListController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -325,7 +324,7 @@
       <updated>1606566425846</updated>
       <workItem from="1606566452930" duration="7964000" />
       <workItem from="1606641303463" duration="9482000" />
-      <workItem from="1606744509327" duration="7702000" />
+      <workItem from="1606744509327" duration="8894000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -341,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606754659913</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: fix CartController">
+      <created>1606757285274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606757285275</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +368,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modified WishListResource and CategoryResource" />
     <MESSAGE value="fix: fix ProductController" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix ProductController" />
+    <MESSAGE value="fix: fix CartController" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix CartController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="95" key="#HTTP_Proxy" timestamp="1606676800601">
@@ -389,9 +396,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="408" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606756859205">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1606758682421">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1606756859205" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1606758682421" />
   </component>
 </project>

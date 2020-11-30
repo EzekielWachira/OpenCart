@@ -17,10 +17,11 @@ class WishListController extends Controller
         return WishListResource::collection($wishList);
     }
 
-    public function addToWishList(Product $product, Request $request) {
-        $request->validate([
-            'product_id' => 'required'
-        ]);
+    public function addToWishList($id) {
+//        $request->validate([
+//            'product_id' => 'required'
+//        ]);
+        $product = Product::where('id', $id)->first();
 
         $wishList = new WishList();
         $wishList->product_id = $product->id;
