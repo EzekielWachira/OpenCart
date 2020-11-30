@@ -17,12 +17,12 @@ class CartController extends Controller
         return CartResource::collection($cart);
     }
 
-    public function addToCart(Product $product){
+    public function addToCart($id){
 //        $request->validate([
 //            'product_id' => 'required'
 //        ]);
 
-//        $product = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)->first();
 
         $cart = new Cart();
         $cart->product_id = $product->id;
@@ -32,7 +32,8 @@ class CartController extends Controller
         return new CartResource($cart);
     }
 
-    public function removeProductFromCart(Cart $cart){
+    public function removeProductFromCart($id){
+        $cart = Cart::where('id', $id)->first();
         $cart->delete();
         return response([
             'message' => 'Item removed from cart'

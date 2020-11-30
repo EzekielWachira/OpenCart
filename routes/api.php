@@ -31,7 +31,7 @@ Route::patch('/category/{id}', 'CategoryController@updateCategory')->name('categ
 Route::delete('/category/{id}', 'CategoryController@deleteCategory')->name('category.delete');
 
 Route::get('/cart', 'CartController@getAllCart')->name('cart.get');
-Route::post('/cart', 'CartController@addToCart')->name('cart.add');
+Route::post('/cart/{id}', 'CartController@addToCart')->name('cart.add');
 Route::delete('/cart/{id}', 'CartController@removeProductFromCart')->name('cart.remove');
 
 Route::get('/wishlist', 'WishListController@getAllWishList')->name('wishlist.get');
