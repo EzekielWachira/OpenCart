@@ -17,10 +17,12 @@ class CartController extends Controller
         return CartResource::collection($cart);
     }
 
-    public function addToCart(Product $product, Request $request){
-        $request->validate([
-            'product_id' => 'required'
-        ]);
+    public function addToCart(Product $product){
+//        $request->validate([
+//            'product_id' => 'required'
+//        ]);
+
+//        $product = Product::where('id', $id)->first();
 
         $cart = new Cart();
         $cart->product_id = $product->id;

@@ -23,19 +23,19 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required',
-            'image' => 'required|string',
+            'image' => 'required',
         ]);
 
         $product = new Product();
         $product->category_id = $request->category_id;
         $product->name = $request->name;
-        $product->decription = $request->description;
+        $product->description = $request->description;
         $product->price = $request->price;
-        $product->image = time().'_'.$request->file('product_image')
+        $product->image = time().'_'.$request->file('image')
             ->getClientOriginalName();
 
-        $request->file('product_image')->storeAs(
-            'images', time().'_'.$request->file('product_image')
+        $request->file('image')->storeAs(
+            'images', time().'_'.$request->file('image')
             ->getClientOriginalName(), 'public'
         );
 
@@ -59,19 +59,23 @@ class ProductController extends Controller
         }
     }
 
-    public function updateProduct(Product $product, Request $request){
+    public function updateProduct($id, Request $request){
         $data = [
             'category_id' => $request->category_id,
             'name' => $request->name,
             'description' => $request->description,
-            'price' => $request->price,
-            'image' => time().'_'.$request->file('product_image')->getClientOriginalName()
+            'price' => $request->price
         ];
 
-        $request->file('product_image')->storeAs(
-            'images', time().'_'.$request->file('product_image')
-            ->getClientOriginalName(), 'public'
-        );
+        if ($request->hasFile('image')) {
+            $data = [ 'image' => time().'_'.$request->file('product_image')->getClientOriginalName()];
+            $request->file('product_image')->storeAs(
+                'images', time().'_'.$request->file('product_image')
+                ->getClientOriginalName(), 'public'
+            );
+        }
+
+        $product = Product::where('id', $id)->with('category')->first();
 
         $product->update($data);
 
@@ -81,7 +85,7 @@ class ProductController extends Controller
     public function deleteProduct(Product $product){
         $product->delete();
         return response([
-            'message' => 'Product not found'
+            'message' => 'Product deleted'
         ]);
 //        return new ProductResource($product);
     }

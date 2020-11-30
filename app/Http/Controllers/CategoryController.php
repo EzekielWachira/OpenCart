@@ -19,6 +19,7 @@ class CategoryController extends Controller
         ]);
 
         $category = new Category();
+        $category->name = $request->name;
         $category->save();
 
         return response([
@@ -39,24 +40,33 @@ class CategoryController extends Controller
         }
     }
 
-    public function updateCategory(Category $category, Request $request){
-        $request->validate([
-            'name' => 'required|string|max:255'
-        ]);
+    public function updateCategory($id, Request $request){
+//        $request->validate([
+//            'name' => 'required|string|max:255'
+//        ]);
 
         $data = [
             'name' => $request->name
         ];
+
+        $category = Category::where('id', $id)->with('product')->first();
 
         $category->update($data);
 
         return new CategoryResource($category);
     }
 
-    public function deleteCategory(Category $category) {
-        $category->delete();
-        return response([
-            'message' => 'Category deleted'
-        ]);
+    public function deleteCategory($id) {
+        $category = Category::where('id', $id)->first();
+        if ($category) {
+            $category->delete();
+            return response([
+                'message' => 'Category deleted'
+            ]);
+        } else {
+            return response([
+                'error!' => 'Category not found'
+            ]);
+        }
     }
 }
