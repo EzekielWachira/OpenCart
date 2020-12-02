@@ -15,4 +15,16 @@ class ProductController extends Controller
     public function show(Product $product): ProductResource {
         return new ProductResource($product);
     }
+    
+    public function store(Request $request): ProductResource {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'image' => 'required',
+            'category_id' => 'required'
+        ]);
+        $product = Product::create($request->all());
+        return new ProductResource($product);
+    }
 }
