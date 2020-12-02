@@ -27,4 +27,8 @@ class ProductController extends Controller
         $product = Product::create($request->all());
         return new ProductResource($product);
     }
+    public function update(Product $product, Request $request): ProductResource {
+        $product->update($request->all());
+        return new ProductResource($product);
+    }
 }
