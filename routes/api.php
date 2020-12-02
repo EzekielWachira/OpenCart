@@ -26,7 +26,4 @@ Route::resource('/category', CategoryController::class);
 
 Route::resource('/cart', CartController::class);
 
-
-Route::get('/wishlist', 'WishListController@getAllWishList')->name('wishlist.get');
-Route::post('/wishlist/{id}', 'WishListController@addToWishlist')->name('wishlist.add');
-Route::delete('/wishlist/{id}', 'WishListController@removeProductFromWishList')->name('wishlist.remove');
+Route::resource('/wishlist', WishListController::class);

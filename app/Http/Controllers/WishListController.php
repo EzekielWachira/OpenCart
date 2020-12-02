@@ -3,21 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\WishListResource;
+use App\Http\Resources\WishListResourceCollection;
 use App\Product;
 use App\WishList;
 use Illuminate\Http\Request;
 
 class WishListController extends Controller
 {
-    public function getAllWishList(){
+    public function index(): WishListResourceCollection{
         $wishList = WishList::with('product')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return WishListResource::collection($wishList);
+        return new WishListResourceCollection($wishList);
     }
 
-    public function addToWishList($id) {
+    public function store($id) {
 //        $request->validate([
 //            'product_id' => 'required'
 //        ]);
@@ -31,7 +32,7 @@ class WishListController extends Controller
         return new WishListResource($wishList);
     }
 
-    public function removeProductFromWishList(WishList $wishList){
+    public function destroy(WishList $wishList){
         if ($wishList) {
             $wishList->delete();
             return response([
