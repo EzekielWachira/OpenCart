@@ -4,20 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Http\Resources\CartResource;
+use App\Http\Resources\CartResourceCollection;
 use App\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function getAllCart(){
+    public function index(): CartResourceCollection{
         $cart = Cart::with('product')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return CartResource::collection($cart);
+        return new CartResourceCollection($cart);
     }
 
-    public function addToCart($id){
+    public function store($id){
 //        $request->validate([
 //            'product_id' => 'required'
 //        ]);
@@ -32,7 +33,7 @@ class CartController extends Controller
         return new CartResource($cart);
     }
 
-    public function removeProductFromCart($id){
+    public function destroy($id){
         $cart = Cart::where('id', $id)->first();
         $cart->delete();
         return response([
