@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Resources\CategoryCollectionResource;
 use App\Http\Resources\CategoryResource;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function getAllCategories(){
+    public function index(): CategoryCollectionResource{
         $category = Category::with('product')->get();
-        return CategoryResource::collection($category);
+        return new CategoryCollectionResource($category);
     }
 
-    public function addCategory(Request $request){
+    public function store(Request $request){
         $request->validate([
             'name' => 'required|string|max:255'
         ]);
@@ -27,7 +28,7 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function showCategory($id){
+    public function show($id){
         $category = Category::where('id', $id)
             ->with('product')->first();
 
@@ -40,7 +41,7 @@ class CategoryController extends Controller
         }
     }
 
-    public function updateCategory($id, Request $request){
+    public function update($id, Request $request){
 //        $request->validate([
 //            'name' => 'required|string|max:255'
 //        ]);
@@ -56,7 +57,7 @@ class CategoryController extends Controller
         return new CategoryResource($category);
     }
 
-    public function deleteCategory($id) {
+    public function destroy($id) {
         $category = Category::where('id', $id)->first();
         if ($category) {
             $category->delete();
