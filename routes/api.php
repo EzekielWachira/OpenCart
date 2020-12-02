@@ -1,7 +1,9 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/products', 'ProductController@getAll')->name('product.all');
-Route::get('/product/{id}', 'ProductController@showProduct')->name('product.get');
-Route::post('/product', 'ProductController@addProduct')->name('product.add');
-Route::patch('/product/{id}', 'ProductController@updateProduct')->name('product.update');
-Route::delete('/product/{id}', 'ProductController@deleteProduct')->name('product.delete');
+//Route::get('/products', 'ProductController@getAll')->name('product.all');
+//Route::get('/product/{id}', 'ProductController@showProduct')->name('product.get');
+//Route::post('/product', 'ProductController@addProduct')->name('product.add');
+//Route::patch('/product/{id}', 'ProductController@updateProduct')->name('product.update');
+//Route::delete('/product/{id}', 'ProductController@deleteProduct')->name('product.delete');
+Route::resource('/product', ProductController::class);
 
 Route::post('/category', 'CategoryController@addCategory')->name('category.add');
 Route::get('/categories', 'CategoryController@getAllCategories')->name('category.get');
