@@ -1,0 +1,75 @@
+GET http://127.0.0.1:8000/products
+Accept: application/json
+Content-Type: application/json
+Connection: keep-alive
+
+<> 2020-11-29T100538.404.json
+
+###
+
+GET http://localhost:8000/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2020-11-29T100353.404.json
+
+###
+
+GET http://127.0.0.1:8000/products
+Accept: application/json
+Content-Type: application/json
+
+<> 2020-11-29T100144.404.json
+
+###
+
+GET http://127.0.0.1:8000/categories
+Accept: application/json
+Content-Type: application/json
+
+<> 2020-11-29T100116.404.json
+
+###
+
+GET http://127.0.0.1:8000/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2020-11-29T100043.404.json
+
+###
+
+GET http://127.0.0.1:8000/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2020-11-29T100027.404.json
+
+###
+
+GET http://localhost:8000/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2020-11-29T095901.404.json
+
+###
+
+GET http://localhost:8080/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/categories
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+

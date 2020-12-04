@@ -40,7 +40,8 @@ class CartController extends Controller
         ]);
     }
 
-    public function clearCart(){
-        $cart = Cart::all();
+    public function clearCart(Cart $cart){
+//        $cart = Cart::all();
+        $cart->delete();
     }
 }
