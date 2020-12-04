@@ -24,6 +24,10 @@ Route::post('/product', 'ProductController@addProduct')->name('product.add');
 Route::patch('/product/{id}', 'ProductController@updateProduct')->name('product.update');
 Route::delete('/product/{id}', 'ProductController@deleteProduct')->name('product.delete');
 
+Route::group(['middleware' => 'auth:sanctum'], function (){
+
+});
+
 Route::post('/category', 'CategoryController@addCategory')->name('category.add');
 Route::get('/categories', 'CategoryController@getAllCategories')->name('category.get');
 Route::get('/category/{id}', 'CategoryController@showCategory')->name('category.show');
