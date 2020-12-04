@@ -145,12 +145,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kv1kPBK5DtD6njLMk5JNJPA7o1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -331,6 +334,7 @@
       <workItem from="1606566452930" duration="7964000" />
       <workItem from="1606641303463" duration="9482000" />
       <workItem from="1606744509327" duration="9144000" />
+      <workItem from="1607117144392" duration="436000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -391,6 +395,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="modified WishListResource and CategoryResource" />
     <MESSAGE value="fix: fix ProductController" />
     <MESSAGE value="fix: fix CartController" />
