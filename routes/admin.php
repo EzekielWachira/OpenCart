@@ -7,11 +7,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register',  'Auth\RegisterController@register')->name('user.register');
-Route::post('/login', 'Auth\LoginController@login')->name('user.login');
+Route::post('/register',  'Admin\AdminController@register')->name('user.register');
+Route::post('/login', 'Admin\AdminController@login')->name('user.login');
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
-   Route::post('/logout', 'LoginController@logout')->name('user.logout');
+   Route::post('/logout', 'Admin\AdminController@logout')->name('user.logout');
     Route::get('/products', 'ProductController@getAll')->name('product.all');
 
     Route::get('/product/{id}', 'ProductController@showProduct')->name('product.get');
