@@ -47,7 +47,8 @@ class AdminController extends Controller
             ]);
         }
         return $user->createToken('AUTH_TOKEN', [
-            'ADD_PRODUCT', 'DELETE_PRODUCT', 'UPDATE_PRODUCT', 'ADD_CATEGORY', 'DELETE_CATEGORY', 'UPDATE_CATEGORY'
+            'ADD_PRODUCT', 'DELETE_PRODUCT', 'UPDATE_PRODUCT', 'ADD_CATEGORY',
+            'DELETE_CATEGORY', 'UPDATE_CATEGORY', 'REMOVE_USER', 'ADD_USER'
         ])->plainTextToken;
     }
 

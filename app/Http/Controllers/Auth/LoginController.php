@@ -22,7 +22,10 @@ class LoginController extends Controller
                 'error' => 'User email or password do not match with our records'
             ]);
         }
-        return $user->createToken('AUTH_TOKEN')->plainTextToken;
+        return $user->createToken('AUTH_TOKEN', [
+            'VIEW_PRODUCTS', 'VIEW_CATEGORIES', 'VIEW_CART',
+            'ADD_CART', 'DELETE_CART', 'VIEW_WISHLIST', 'ADD_WISHLIST'
+        ])->plainTextToken;
     }
 
     public function logout(Request $request) {
