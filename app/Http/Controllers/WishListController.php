@@ -14,14 +14,19 @@ class WishListController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
+        if (!auth()->user()->tokeCan('VIEW_WISHLIST')) {
+            abort(403, 'You are not allowed to view wishlist');
+        }
+
         return WishListResource::collection($wishList);
     }
 
     public function addToWishList(Request $request,$id) {
-//        $request->validate([
-//            'product_id' => 'required'
-//        ]);
         $product = Product::where('id', $id)->first();
+
+        if (!auth()->user()->tokenCan('ADD_WISHLIST')) {
+            abort(403, 'You are not allowed to add to wishlist');
+        }
 
         $wishList = new WishList();
         $wishList->product_id = $product->id;
@@ -32,15 +37,21 @@ class WishListController extends Controller
         return new WishListResource($wishList);
     }
 
-    public function removeProductFromWishList(WishList $wishList){
+    public function removeProductFromWishList($wishList_id){
+
+        $wishList = WishList::where('id', $wishList_id)->first();
+
         if ($wishList) {
+            if (!auth()->user()->tokenCan('REMOVE_WISHLIST')) {
+                abort(403, 'You are not allowed to remove item from wishlist');
+            }
             $wishList->delete();
             return response([
                 'message' => 'Product removed from wishlist'
             ]);
         } else {
             return response([
-                'error!' => 'Product to remove not found'
+                'error' => 'Product to remove not found'
             ]);
         }
     }

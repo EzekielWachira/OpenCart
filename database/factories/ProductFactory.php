@@ -8,11 +8,11 @@ use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {
     return [
-        'category_id' => 1,
+        'category_id' => $faker->randomDigit,
         'name' => $faker->text(10),
         'description' => $faker->paragraph,
         'image' => $faker->text(15),
-        'price' => 20.34,
+        'price' => $faker->randomFloat(100, 0),
         'rating' => 4
     ];
 });

@@ -24,7 +24,8 @@ class LoginController extends Controller
         }
         return $user->createToken('AUTH_TOKEN', [
             'VIEW_PRODUCTS', 'VIEW_CATEGORIES', 'VIEW_CART',
-            'ADD_CART', 'DELETE_CART', 'VIEW_WISHLIST', 'ADD_WISHLIST'
+            'ADD_CART', 'DELETE_CART', 'VIEW_WISHLIST', 'ADD_WISHLIST',
+            'REMOVE_WISHLIST'
         ])->plainTextToken;
     }
 
