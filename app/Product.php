@@ -11,14 +11,14 @@ class Product extends Model
     ];
 
     public function cart() {
-        return $this->belongsTo(Cart::class);
+        return $this->hasMany(Cart::class);
     }
 
     public function category() {
         return $this->belongsTo(Category::class);
     }
 
-    public function wishlist(){
-        return $this->belongsTo(WishList::class);
-    }
+//    public function wishlist(){
+//        return $this->hasMany(WishList::class);
+//    }
 }

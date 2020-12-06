@@ -17,7 +17,7 @@ class WishListController extends Controller
         return WishListResource::collection($wishList);
     }
 
-    public function addToWishList($id) {
+    public function addToWishList(Request $request,$id) {
 //        $request->validate([
 //            'product_id' => 'required'
 //        ]);
@@ -25,6 +25,7 @@ class WishListController extends Controller
 
         $wishList = new WishList();
         $wishList->product_id = $product->id;
+        $wishList->user_id = $request->user()->id;
 
         $wishList->save();
 
