@@ -54,19 +54,27 @@ class CategoryController extends Controller
         ];
 
         $category = Category::where('id', $id)->with('product')->first();
+        if (auth()->user()->tokenCan('UPDATE_CATEGORY')) {
+            $category->update($data);
 
-        $category->update($data);
+            return new CategoryResource($category);
+        } else {
+            abort(403, 'You are not allowed to do this operation');
+        }
 
-        return new CategoryResource($category);
     }
 
     public function deleteCategory($id) {
         $category = Category::where('id', $id)->first();
         if ($category) {
-            $category->delete();
-            return response([
-                'message' => 'Category deleted'
-            ]);
+            if (auth()->user()->tokenCan('DELETE_CATEGORY')) {
+                $category->delete();
+                return response([
+                    'message' => 'Category deleted'
+                ]);
+            } else {
+                abort(403, 'You are not allowed to do this operation');
+            }
         } else {
             return response([
                 'error!' => 'Category not found'
