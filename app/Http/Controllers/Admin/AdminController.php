@@ -16,13 +16,20 @@ class AdminController extends Controller
             'password' => 'required|confirmed'
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+//        $user = User::create([
+//            'name' => $request->name,
+//            'email' => $request->email,
+//            'password' => Hash::make($request->password),
+//            'isAdmin' => true
+//        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->isAdmin = true;
 
         if ($user) {
+            $user->save();
             return response([
                 'message' => 'User created'
             ]);

@@ -20,11 +20,15 @@ class CategoryController extends Controller
 
         $category = new Category();
         $category->name = $request->name;
-        $category->save();
+        if (auth()->user()->tokenCan('ADD_CATEGORY')) {
+            $category->save();
+            return response([
+                'message' => 'Category added'
+            ]);
+        } else {
+            abort(403, 'You are not allowed to do this operation');
+        }
 
-        return response([
-            'message' => 'Category added'
-        ]);
     }
 
     public function showCategory($id){

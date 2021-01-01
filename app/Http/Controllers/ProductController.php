@@ -31,6 +31,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
+//        $product->image = $request->file('image');
         $product->image = time().'_'.$request->file('image')
             ->getClientOriginalName();
 
@@ -39,11 +40,15 @@ class ProductController extends Controller
             ->getClientOriginalName(), 'public'
         );
 
-        $product->save();
+        if (auth()->user()->tokenCan('ADD_PRODUCT')) {
+            $product->save();
 
-        return response([
-            'message' => 'Product added'
-        ]);
+            return response([
+                'message' => 'Product added'
+            ]);
+        } else {
+            abort(403, 'You are not allowed to do this operation');
+        }
 
     }
 
@@ -77,16 +82,26 @@ class ProductController extends Controller
 
         $product = Product::where('id', $id)->with('category')->first();
 
-        $product->update($data);
+        if (auth()->user()->tokenCan('UPDATE_PRODUCT')) {
+            $product->update($data);
 
-        return new ProductResource($product);
+            return new ProductResource($product);
+        } else {
+            abort(403, 'You are not allowed to do this operation');
+        }
+
+
     }
 
     public function deleteProduct(Product $product){
         $product->delete();
-        return response([
-            'message' => 'Product deleted'
-        ]);
+        if (auth()->user()->tokenCan('DELETE_PRODUCT')) {
+            return response([
+                'message' => 'Product deleted'
+            ]);
+        } else {
+            abort(403, 'You are not allowed to do this operation');
+        }
 //        return new ProductResource($product);
     }
 }
