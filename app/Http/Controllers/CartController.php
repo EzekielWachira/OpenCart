@@ -32,6 +32,7 @@ class CartController extends Controller
         $cart->user_id = $request->user()->id;
 
         $cart->save();
+//        response()->download(public_path('file_name'), 'name you intend to name it');
 
         return new CartResource($cart);
     }

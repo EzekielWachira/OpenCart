@@ -26,14 +26,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
+      <change afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_210526_create_admins_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Admin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OpenCart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OpenCart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124312_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_28_124312_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/getters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/getters.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +57,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,7 +189,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../opencartadmin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -176,6 +197,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -352,7 +374,14 @@
       <workItem from="1607117144392" duration="10661000" />
       <workItem from="1607195952802" duration="4728000" />
       <workItem from="1607244224402" duration="253000" />
-      <workItem from="1609508403727" duration="7721000" />
+      <workItem from="1609508403727" duration="8881000" />
+      <workItem from="1609663925260" duration="1283000" />
+      <workItem from="1610171515722" duration="2189000" />
+      <workItem from="1610286693155" duration="2518000" />
+      <workItem from="1610296740144" duration="980000" />
+      <workItem from="1610315480482" duration="3200000" />
+      <workItem from="1610524204697" duration="7157000" />
+      <workItem from="1610916875245" duration="4160000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -447,6 +476,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="92" y="92" width="1182" height="584" maximized="true" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1607162869897" />
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1609520848056">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1609520848056" />
     <state width="1323" height="408" key="GridCell.Tab.0.bottom" timestamp="1606676802471">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -463,6 +496,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="408" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
+    <state x="263" y="118" key="IDE.errors.dialog" timestamp="1610530921056">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="263" y="118" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1610530921056" />
+    <state x="339" y="172" key="run.anything.popup" timestamp="1610297070631">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610297070631" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1607230936076">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

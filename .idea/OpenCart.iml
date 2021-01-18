@@ -112,5 +112,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="opencartadmin" />
   </component>
 </module>

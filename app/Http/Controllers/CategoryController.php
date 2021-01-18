@@ -22,9 +22,10 @@ class CategoryController extends Controller
         $category->name = $request->name;
         if (auth()->user()->tokenCan('ADD_CATEGORY')) {
             $category->save();
-            return response([
-                'message' => 'Category added'
-            ]);
+            return new CategoryResource($category);
+//            return response([
+//                'message' => 'Category added'
+//            ]);
         } else {
             abort(403, 'You are not allowed to do this operation');
         }
