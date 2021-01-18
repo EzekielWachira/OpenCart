@@ -45,4 +45,8 @@ class User extends Authenticatable
     public function wishList(){
         return $this->hasMany(WishList::class);
     }
+
+    public function admin(){
+        return $this->belongsTo(Admin::class);
+    }
 }

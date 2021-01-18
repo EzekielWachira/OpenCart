@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AdminResource;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -80,5 +81,14 @@ class AdminController extends Controller
         return response([
             'message' => 'You logged out'
         ]);
+    }
+
+    public function listAllAdmins() {
+        $admins = Admin::all();
+//        foreach ($admins as $admin){
+////            $users = User::findOrFail($admin->id);
+//             return new AdminResource($users);
+//        }
+        return new AdminResource($admins);
     }
 }

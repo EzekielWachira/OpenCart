@@ -16,6 +16,8 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/logout', 'Auth\LoginController@logout')->name('user.logout');
     Route::get('/products', 'ProductController@getAll')->name('product.all');
 
+    Route::get('/admins', 'Admin\AdminController@listAllAdmins')->name('admin.all');
+
     Route::get('/product/{id}', 'ProductController@showProduct')->name('product.get');
     Route::post('/product', 'ProductController@addProduct')->name('product.add');
     Route::patch('/product/{id}', 'ProductController@updateProduct')->name('product.update');

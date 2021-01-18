@@ -26,22 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
-      <change afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_210526_create_admins_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/AdminResource.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Admin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OpenCart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OpenCart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sanctum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124312_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_28_124312_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" afterDir="false" />
@@ -381,7 +372,7 @@
       <workItem from="1610296740144" duration="980000" />
       <workItem from="1610315480482" duration="3200000" />
       <workItem from="1610524204697" duration="7157000" />
-      <workItem from="1610916875245" duration="4160000" />
+      <workItem from="1610916875245" duration="9371000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -504,9 +495,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610297070631" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1607230936076">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1610952500409">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1607230936076" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1610952500409" />
   </component>
 </project>
