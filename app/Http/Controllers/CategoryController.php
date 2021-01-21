@@ -32,8 +32,8 @@ class CategoryController extends Controller
 
     }
 
-    public function showCategory($id){
-        $category = Category::where('id', $id)
+    public function showCategory($name){
+        $category = Category::where('name', $name)
             ->with('product')->first();
 
         if ($category) {
