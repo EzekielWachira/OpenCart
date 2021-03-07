@@ -70,6 +70,9 @@ class AdminController extends Controller
                 'error' => 'User email or password do not match with our records'
             ]);
         }
+
+        $user->tokens()->delete();
+
         return $user->createToken('AUTH_TOKEN', [
             'ADD_PRODUCT', 'DELETE_PRODUCT', 'UPDATE_PRODUCT', 'ADD_CATEGORY',
             'DELETE_CATEGORY', 'UPDATE_CATEGORY', 'REMOVE_USER', 'ADD_USER'

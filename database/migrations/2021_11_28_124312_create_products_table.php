@@ -23,9 +23,9 @@ class CreateProductsTable extends Migration
             $table->integer('rating')->nullable();
             $table->timestamps();
 
-//            $table->foreign('category_id')
-//                ->references('id')
-//                ->on('categories')->cascadeOnDelete();
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')->cascadeOnDelete();
         });
     }
 

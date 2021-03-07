@@ -15,13 +15,14 @@ class CategoryController extends Controller
 
     public function addCategory(Request $request){
         $request->validate([
-            'name' => 'required|string|max:255'
+            'name' => 'required|string|max:255|unique:categories'
         ]);
 
-        $category = new Category();
-        $category->name = $request->name;
+//        $category = new Category();
+//        $category->name = $request->name;
         if (auth()->user()->tokenCan('ADD_CATEGORY')) {
-            $category->save();
+            $category = Category::create($request->all());
+//            $category->save();
             return new CategoryResource($category);
 //            return response([
 //                'message' => 'Category added'
@@ -32,20 +33,20 @@ class CategoryController extends Controller
 
     }
 
-    public function showCategory($name){
+    public function show(string $name){
         $category = Category::where('name', $name)
             ->with('product')->first();
 
-        if ($category) {
             return new CategoryResource($category);
-        } else {
-            return response([
-                'message' => 'Category not found'
-            ]);
-        }
+//        if ($category) {
+//        } else {
+//            return response([
+//                'message' => 'Category not found'
+//            ]);
+//        }
     }
 
-    public function updateCategory($id, Request $request){
+    public function updateCategory($name, Request $request){
 //        $request->validate([
 //            'name' => 'required|string|max:255'
 //        ]);
@@ -54,7 +55,7 @@ class CategoryController extends Controller
             'name' => $request->name
         ];
 
-        $category = Category::where('id', $id)->with('product')->first();
+        $category = Category::where('name', $name)->with('product')->first();
         if (auth()->user()->tokenCan('UPDATE_CATEGORY')) {
             $category->update($data);
 
@@ -65,8 +66,8 @@ class CategoryController extends Controller
 
     }
 
-    public function deleteCategory($id) {
-        $category = Category::where('id', $id)->first();
+    public function deleteCategory($name) {
+        $category = Category::where('name', $name)->first();
         if ($category) {
             if (auth()->user()->tokenCan('DELETE_CATEGORY')) {
                 $category->delete();

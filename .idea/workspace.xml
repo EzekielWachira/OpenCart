@@ -20,23 +20,28 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:develop" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
-      <change afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Admin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124312_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_28_124312_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124442_create_carts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_28_124442_create_carts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124518_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_28_124518_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_124547_create_wish_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_28_124547_create_wish_lists_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/layouts/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Product.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/mutations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/getters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-product/getters.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +60,9 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../opencartadmin" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
@@ -371,6 +376,9 @@
       <workItem from="1610315480482" duration="3200000" />
       <workItem from="1610524204697" duration="7157000" />
       <workItem from="1610916875245" duration="24130000" />
+      <workItem from="1611400540930" duration="9622000" />
+      <workItem from="1614610492759" duration="8743000" />
+      <workItem from="1615104312706" duration="16769000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -427,7 +435,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -453,10 +461,18 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="459" y="95" key="#HTTP_Proxy/0.0.1366.768@0.0.1366.768" timestamp="1606676800601" />
+    <state x="402" y="0" width="588" height="768" key="#PHP" timestamp="1615118425655">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="402" y="0" width="588" height="768" key="#PHP/0.0.1366.768@0.0.1366.768" timestamp="1615118425655" />
     <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606675936961">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1606675936961" />
+    <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1615126662125">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1615126662125" />
     <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607145648432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

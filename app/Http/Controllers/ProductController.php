@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Http\Resources\ProductResource;
 use App\Product;
 use Illuminate\Http\Request;
@@ -19,20 +20,25 @@ class ProductController extends Controller
 
     public function addProduct(Request $request){
         $request->validate([
-            'category_id' => 'required',
             'name' => 'required|string|max:255',
+            'category_id' => 'required',
             'description' => 'required|string',
             'price' => 'required',
             'image' => 'required',
         ]);
 
+//        $category = Category::where('name', $categoryName)->first();
+
+//        dd($category);
+
         $product = new Product();
         $product->category_id = $request->category_id;
+//        $product->category_id = $request->category_id;
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
 //        $product->image = $request->file('image');
-        $product->image = time().'_'.$request->file('image')
+        $product->image = '/storage/images/'.time().'_'.$request->file('image')
             ->getClientOriginalName();
 
         $request->file('image')->storeAs(
