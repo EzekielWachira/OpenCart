@@ -26,15 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Category.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Product.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Beauty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Beauty.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/quasar.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/quasar.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Clothes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Clothes.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Computers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Computers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Electronics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Electronics.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Phones.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Phones.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Shoes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Shoes.vue" afterDir="false" />
     </list>
@@ -374,6 +370,7 @@
       <workItem from="1611400540930" duration="9622000" />
       <workItem from="1614610492759" duration="8743000" />
       <workItem from="1615104312706" duration="38913000" />
+      <workItem from="1615229712593" duration="6119000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -500,10 +497,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="263" y="118" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1610530921056" />
-    <state x="339" y="172" key="run.anything.popup" timestamp="1610968230183">
+    <state x="339" y="172" key="run.anything.popup" timestamp="1615234295158">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610968230183" />
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1615234295158" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1610952500409">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
