@@ -38,7 +38,7 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->price = $request->price;
 //        $product->image = $request->file('image');
-        $product->image = '/storage/images/'.time().'_'.$request->file('image')
+        $product->image = 'http://127.0.0.1:8000/storage/images/'.time().'_'.$request->file('image')
             ->getClientOriginalName();
 
         $request->file('image')->storeAs(
