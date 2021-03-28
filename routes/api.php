@@ -13,6 +13,7 @@ Route::post('/admin/login', 'Admin\AdminController@login')->name('admin.login');
 Route::post('/admin/register', 'Admin\AdminController@register')->name('admin.register');
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('/users', 'User\UserController@getUsers')->name('users.all');
     Route::post('/logout', 'Auth\LoginController@logout')->name('user.logout');
     Route::get('/products', 'ProductController@getAll')->name('product.all');
 

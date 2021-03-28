@@ -26,13 +26,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="932b7f6d-7a95-4fd1-b3e1-065de543b261" name="Default Changelist" comment="modified WishListResource and CategoryResource">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/quasar.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/quasar.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/Api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/Api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/database/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/database/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Beauty.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Beauty.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Clothes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Clothes.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Customers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Electronics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Electronics.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Phones.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Phones.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Products.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/pages/Shoes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/pages/Shoes.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/getters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/getters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/mutations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/mutations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../opencartadmin/src/store/module-auth/state.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +381,11 @@
       <workItem from="1611400540930" duration="9622000" />
       <workItem from="1614610492759" duration="8743000" />
       <workItem from="1615104312706" duration="38913000" />
-      <workItem from="1615229712593" duration="6119000" />
+      <workItem from="1615229712593" duration="7387000" />
+      <workItem from="1615322159102" duration="672000" />
+      <workItem from="1616830505626" duration="872000" />
+      <workItem from="1616935406578" duration="206000" />
+      <workItem from="1616938855559" duration="9134000" />
     </task>
     <task id="LOCAL-00001" summary="modified WishListResource and CategoryResource">
       <created>1606674653713</created>
@@ -449,18 +464,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix: fix WishListController" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="95" key="#HTTP_Proxy" timestamp="1606676800601">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="459" y="95" key="#HTTP_Proxy/0.0.1366.768@0.0.1366.768" timestamp="1606676800601" />
     <state x="402" y="0" width="588" height="768" key="#PHP" timestamp="1615118425655">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="402" y="0" width="588" height="768" key="#PHP/0.0.1366.768@0.0.1366.768" timestamp="1615118425655" />
-    <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606675936961">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="275" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1606675936961" />
     <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1615137878627">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -469,38 +476,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607145648432" />
-    <state x="92" y="92" width="1182" height="584" maximized="true" key="DiffContextDialog" timestamp="1607162869897">
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="DiffContextDialog" timestamp="1615238456301">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="92" y="92" width="1182" height="584" maximized="true" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1607162869897" />
+    <state x="92" y="92" width="1182" height="584" maximized="true" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1615238456301" />
     <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1609520848056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1609520848056" />
-    <state width="1323" height="408" key="GridCell.Tab.0.bottom" timestamp="1606676802471">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1323" height="408" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
-    <state width="1323" height="408" key="GridCell.Tab.0.center" timestamp="1606676802471">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1323" height="408" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
-    <state width="1323" height="408" key="GridCell.Tab.0.left" timestamp="1606676802471">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1323" height="408" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
-    <state width="1323" height="408" key="GridCell.Tab.0.right" timestamp="1606676802471">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state width="1323" height="408" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1606676802471" />
     <state x="263" y="118" key="IDE.errors.dialog" timestamp="1610530921056">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="263" y="118" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1610530921056" />
-    <state x="339" y="172" key="run.anything.popup" timestamp="1615234295158">
+    <state x="339" y="172" key="run.anything.popup" timestamp="1615322671051">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1615234295158" />
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1615322671051" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1610952500409">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
