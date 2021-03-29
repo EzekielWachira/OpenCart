@@ -13,7 +13,7 @@ class ProductController extends Controller
     public function getAll() {
         $product = Product::with('category')
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(50);
 
         return ProductResource::collection($product);
     }
